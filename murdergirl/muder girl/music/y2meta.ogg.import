@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/y2meta.ogg-f10fdc7d459b7ee5e21728c340869d20.oggstr"
+
+[deps]
+
+source_file="res://music/y2meta.ogg"
+dest_files=[ "res://.import/y2meta.ogg-f10fdc7d459b7ee5e21728c340869d20.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

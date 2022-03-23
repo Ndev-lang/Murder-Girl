@@ -1,0 +1,163 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scripts/enemy.gd" type="Script" id=1]
+[ext_resource path="res://sprites/npc/tile001.png" type="Texture" id=2]
+[ext_resource path="res://sprites/npc/tile002.png" type="Texture" id=3]
+[ext_resource path="res://sprites/npc/tile007.png" type="Texture" id=4]
+[ext_resource path="res://sprites/npc/tile000.png" type="Texture" id=5]
+[ext_resource path="res://sprites/npc/tile006.png" type="Texture" id=6]
+[ext_resource path="res://sprites/npc/tile003.png" type="Texture" id=7]
+[ext_resource path="res://sprites/npc/tile004.png" type="Texture" id=8]
+[ext_resource path="res://sprites/npc/tile005.png" type="Texture" id=9]
+[ext_resource path="res://sprites/npc/tile008.png" type="Texture" id=10]
+[ext_resource path="res://sound effect/400181__tomattka__girl-screaming-05.ogg" type="AudioStream" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.3101, 83.9277 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19.18, 79.12 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19.1798, 79.1204 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 75 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 39.2867, 29.0002 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 80.3916, 91.4787 )
+
+[node name="enemy" type="KinematicBody2D"]
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision"]
+position = Vector2( 33.7519, -56.416 )
+scale = Vector2( 1.93969, 1.07769 )
+polygon = PoolVector2Array( -20.7526, -4.07034, -92.8467, -55.4579, -89.927, 130.218 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="vision"]
+position = Vector2( 519.289, -54.1711 )
+scale = Vector2( 1.93969, 1.07769 )
+polygon = PoolVector2Array( -264.377, -7.19497, -197.18, -40.0243, -199.127, 135.142 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sides check" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 16
+
+[node name="left" type="CollisionShape2D" parent="sides check"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 45, 0 )
+shape = SubResource( 2 )
+
+[node name="right" type="CollisionShape2D" parent="sides check"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -45, 0 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+process_priority = -1
+position = Vector2( 0, 15 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 4 )
+animation = "andando"
+flip_h = true
+
+[node name="floor_checker" type="RayCast2D" parent="."]
+scale = Vector2( 4.638, 7.154 )
+enabled = true
+cast_to = Vector2( 0, 25 )
+collision_mask = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+scale = Vector2( 15.7254, 13.2222 )
+process_parent = true
+physics_process_parent = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/morte = SubResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="enemy detector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy detector"]
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="scream" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[connection signal="area_entered" from="sides check" to="." method="_on_sides_check_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="enemy detector" to="." method="_on_enemy_detector_body_entered"]
+[connection signal="body_exited" from="enemy detector" to="." method="_on_enemy_detector_body_exited"]

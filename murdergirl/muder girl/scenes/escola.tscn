@@ -1,0 +1,331 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scenes/lixeira.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/student.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/item.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/y2meta.ogg" type="AudioStream" id=5]
+[ext_resource path="res://scripts/CollisionShape2D2.gd" type="Script" id=6]
+[ext_resource path="res://sprites/backgorund/2.png" type="Texture" id=8]
+[ext_resource path="res://sprites/itens/kitchen-knife-1135268_1280.png" type="Texture" id=9]
+[ext_resource path="res://sprites/backgorund/white-texture.jpg" type="Texture" id=10]
+[ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/backgorund/porta.png" type="Texture" id=12]
+[ext_resource path="res://sprites/backgorund/rabbit-3075088_640.png" type="Texture" id=13]
+[ext_resource path="res://sprites/backgorund/stairs-44070_1280.png" type="Texture" id=14]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "2.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 631.11, 8.10214 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 133.143, 23.6707 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 43.1877, 895.382 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 265.349, 34.2575 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 27.6724, 28.6144 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 19.5822, 32.9695 )
+
+[node name="escola" type="Node2D"]
+
+[node name="backgroudn" type="Node2D" parent="."]
+position = Vector2( 1312.06, -209.335 )
+scale = Vector2( 2.41833, 2.05383 )
+
+[node name="white-texture" type="Sprite" parent="backgroudn"]
+position = Vector2( -188.612, 309.84 )
+texture = ExtResource( 10 )
+
+[node name="1" type="Sprite" parent="backgroudn"]
+z_index = -2
+
+[node name="2" type="Sprite" parent="backgroudn"]
+position = Vector2( -189.103, -48.2969 )
+scale = Vector2( 0.297204, 0.347283 )
+z_index = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="faca" parent="backgroudn" instance=ExtResource( 4 )]
+position = Vector2( -558.779, 344.371 )
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 9 )
+
+[node name="lixeira" parent="backgroudn" instance=ExtResource( 1 )]
+position = Vector2( -465.834, 360.27 )
+
+[node name="porta" type="Sprite" parent="backgroudn"]
+position = Vector2( -216.95, 324.437 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="porta2" type="Sprite" parent="backgroudn"]
+position = Vector2( -190.41, 138.071 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="porta3" type="Sprite" parent="backgroudn"]
+position = Vector2( 468.417, 134.394 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="porta4" type="Sprite" parent="backgroudn"]
+position = Vector2( 468.417, 134.394 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="porta5" type="Sprite" parent="backgroudn"]
+position = Vector2( -34.2898, -115.611 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="porta6" type="Sprite" parent="backgroudn"]
+position = Vector2( -255.98, -115.611 )
+scale = Vector2( 0.211369, 0.211369 )
+texture = ExtResource( 12 )
+
+[node name="rabbit-3075088_640" type="Sprite" parent="backgroudn"]
+position = Vector2( 12.249, 300.603 )
+scale = Vector2( 0.0756827, 0.0804533 )
+texture = ExtResource( 13 )
+
+[node name="rabbit-3075088_641" type="Sprite" parent="backgroudn"]
+position = Vector2( 29.9321, 121.887 )
+scale = Vector2( 0.0756827, 0.0804533 )
+texture = ExtResource( 13 )
+
+[node name="rabbit-3075088_642" type="Sprite" parent="backgroudn"]
+position = Vector2( 385.064, 132.298 )
+scale = Vector2( 0.0756827, 0.0804533 )
+texture = ExtResource( 13 )
+
+[node name="rabbit-3075088_643" type="Sprite" parent="backgroudn"]
+position = Vector2( -153.833, -127.792 )
+scale = Vector2( 0.0756827, 0.0804533 )
+texture = ExtResource( 13 )
+
+[node name="rabbit-3075088_644" type="Sprite" parent="backgroudn"]
+position = Vector2( 270.125, -29.0659 )
+scale = Vector2( 0.0756827, 0.0804533 )
+texture = ExtResource( 13 )
+
+[node name="ColorRect2" type="ColorRect" parent="backgroudn"]
+margin_left = -372.0
+margin_top = 192.0
+margin_right = 513.0
+margin_bottom = 204.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="backgroudn"]
+margin_left = -378.0
+margin_top = -55.0
+margin_right = 94.0
+margin_bottom = -43.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="backgroudn"]
+margin_left = -1044.0
+margin_top = 384.0
+margin_right = 441.0
+margin_bottom = 396.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cenario1" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 2 )
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -327671, 0, 0, -327670, 0, 0, -327669, 0, 0, -327668, 0, 0, -327667, 0, 0, -327666, 0, 0, -327665, 0, 0, -327664, 0, 0, -327663, 0, 0, -327662, 0, 0, -327661, 0, 0, -327660, 0, 0, -327659, 0, 0, -327658, 0, 0, -327657, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 196635, 0, 0, 196636, 0, 0, 196643, 0, 0, 196644, 0, 0, 196645, 0, 0, 196646, 0, 0, 196647, 0, 0, 655341, 0, 0, 655342, 0, 0, 655343, 0, 0, 655344, 0, 0, 655345, 0, 0, 655346, 0, 0, 655347, 0, 0, 655348, 0, 0, 655349, 0, 0, 655350, 0, 0, 655351, 0, 0, 655352, 0, 0, 655353, 0, 0, 655354, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589856, 0, 0, 589857, 0, 0, 589859, 0, 0, 589860, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -199.55, 472.174 )
+z_index = 2
+collision_mask = 44
+
+[node name="student" type="Node2D" parent="."]
+position = Vector2( 868.044, 261.457 )
+
+[node name="enemy" parent="student" instance=ExtResource( 3 )]
+position = Vector2( 259.224, 167.718 )
+
+[node name="enemy2" parent="student" instance=ExtResource( 3 )]
+position = Vector2( -345.14, 163.128 )
+
+[node name="enemy3" parent="student" instance=ExtResource( 3 )]
+position = Vector2( 740.292, 184.375 )
+
+[node name="enemy4" parent="student" instance=ExtResource( 3 )]
+position = Vector2( -49.4828, -208.463 )
+
+[node name="enemy5" parent="student" instance=ExtResource( 3 )]
+position = Vector2( 1435.51, -256.761 )
+
+[node name="enemy6" parent="student" instance=ExtResource( 3 )]
+position = Vector2( -248.068, -723.461 )
+
+[node name="escadas" type="Node2D" parent="."]
+position = Vector2( 0, 1.52588e-05 )
+
+[node name="4" type="Sprite" parent="escadas"]
+position = Vector2( 2113.99, 270.703 )
+scale = Vector2( 0.181084, 0.181084 )
+z_index = 2
+texture = ExtResource( 14 )
+
+[node name="5" type="Sprite" parent="escadas"]
+position = Vector2( 1917.99, 444.703 )
+scale = Vector2( 0.181084, 0.181084 )
+z_index = 2
+texture = ExtResource( 14 )
+
+[node name="6" type="Sprite" parent="escadas"]
+position = Vector2( 1829.99, 530.703 )
+scale = Vector2( 0.181084, 0.181084 )
+z_index = 2
+texture = ExtResource( 14 )
+
+[node name="7" type="Sprite" parent="escadas"]
+position = Vector2( 1629.44, -226.974 )
+scale = Vector2( 0.181084, 0.181084 )
+z_index = 1
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="8" type="Sprite" parent="escadas"]
+position = Vector2( 1815.44, -56.4722 )
+scale = Vector2( 0.181084, 0.181084 )
+z_index = 2
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="9" type="Sprite" parent="escadas"]
+position = Vector2( 2007.44, 115.528 )
+scale = Vector2( 0.181084, 0.181084 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="objetos cenario" type="Node" parent="."]
+
+[node name="player" type="StaticBody2D" parent="objetos cenario"]
+position = Vector2( 0, 1.52588e-05 )
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 418.729, -454.369 )
+rotation = 1.5708
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( -329.271, 157.631 )
+rotation = 1.5708
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="objetos cenario/player"]
+position = Vector2( 1910.76, 402.813 )
+polygon = PoolVector2Array( -153.818, 192, 337.166, 188.728, 329.39, -210.847, 266.853, -204.741, 2.45874, 53.2354 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="objetos cenario/player"]
+position = Vector2( 1855.04, -139.017 )
+polygon = PoolVector2Array( 122.699, 331.597, -355.294, 337.203, -318.972, -180.939, -313.339, -180.814 )
+one_way_collision = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 1987.42, 215.677 )
+shape = SubResource( 4 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 2612.64, -234.081 )
+shape = SubResource( 5 )
+
+[node name="student" type="StaticBody2D" parent="objetos cenario"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/student"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 2138.11, 226.15 )
+shape = SubResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="objetos cenario"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/Area2D"]
+position = Vector2( 1896.58, -2.13263 )
+shape = SubResource( 7 )
+
+[node name="Area2D2" type="Area2D" parent="objetos cenario"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/Area2D2"]
+position = Vector2( 2018.97, 132.389 )
+shape = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="hud" parent="." instance=ExtResource( 11 )]
+
+[connection signal="item" from="backgroudn/faca" to="Player" method="_on_item_item"]
+[connection signal="morreu" from="backgroudn/lixeira" to="hud" method="_on_lixeira_morreu"]
+[connection signal="pegar" from="Player" to="backgroudn/faca" method="_on_Player_pegar"]
+[connection signal="subir" from="Player" to="objetos cenario/player/CollisionShape2D2" method="_on_Player_subir"]
+[connection signal="subirf" from="Player" to="objetos cenario/player/CollisionShape2D2" method="_on_Player_subirf"]
+[connection signal="body_entered" from="objetos cenario/Area2D" to="objetos cenario/player/CollisionShape2D2" method="entrou"]
+[connection signal="body_exited" from="objetos cenario/Area2D" to="objetos cenario/player/CollisionShape2D2" method="saiu"]
+[connection signal="body_entered" from="objetos cenario/Area2D2" to="objetos cenario/player/CollisionShape2D2" method="entrou1"]

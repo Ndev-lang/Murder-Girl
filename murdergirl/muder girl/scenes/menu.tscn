@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/menu.gd" type="Script" id=1]
+[ext_resource path="res://sprites/backgorund/86326.jpg" type="Texture" id=2]
+[ext_resource path="res://sprites/font/texto.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/menu2.tres" type="StyleBox" id=4]
+[ext_resource path="res://scenes/menu.tres" type="StyleBox" id=5]
+[ext_resource path="res://scenes/shader.gdshader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 6 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.23792
+margin_top = -2.11893
+margin_right = -4.23792
+margin_bottom = -2.1189
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="86326" type="Sprite" parent="."]
+position = Vector2( 515.692, 301.856 )
+scale = Vector2( 0.205328, 0.217194 )
+texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -75.5
+margin_top = -50.0
+margin_right = 780.5
+margin_bottom = 535.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -219.5
+margin_top = -43.0
+margin_right = 219.5
+margin_bottom = 43.0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.5
+margin_top = -254.0
+margin_right = 82.5
+margin_bottom = -226.0
+custom_fonts/font = ExtResource( 3 )
+text = "Murder Girl"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

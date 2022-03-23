@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/student.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/item.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 357.439, 101.889 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 425.519, 587.336 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="CollisionShape2D" instance=ExtResource( 2 )]
+position = Vector2( -259.01, -195.546 )
+
+[node name="enemy" parent="CollisionShape2D" instance=ExtResource( 1 )]
+position = Vector2( 281.589, -216.492 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="item" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 421.91, 397.423 )
+
+[connection signal="pegar" from="CollisionShape2D/Player" to="Node2D/item" method="_on_Player_pegar"]
+[connection signal="item" from="Node2D/item" to="CollisionShape2D/Player" method="_on_item_item"]

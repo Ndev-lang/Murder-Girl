@@ -1,0 +1,194 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/student.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/CollisionShape2D2.gd" type="Script" id=4]
+[ext_resource path="res://sprites/tiles/2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/backgorund/image.png" type="Texture" id=6]
+[ext_resource path="res://sprites/backgorund/3.png" type="Texture" id=8]
+[ext_resource path="res://scenes/mobile controle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://music/intro.ogg" type="AudioStream" id=10]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=2]
+1/name = "2.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 1 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 631.11, 8.10214 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 133.143, 23.6707 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 43.1877, 895.382 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 265.349, 34.2575 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 27.6724, 28.6144 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 19.5822, 32.9695 )
+
+[node name="scene 1" type="Node2D"]
+
+[node name="cenario1" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( -327673, 1, 0, -327672, 1, 0, -327671, 1, 0, -327670, 1, 0, -327669, 1, 0, -327668, 1, 0, -327667, 1, 0, -327666, 1, 0, -327665, 1, 0, -327664, 1, 0, -327663, 1, 0, -327662, 1, 0, -327661, 1, 0, -327660, 1, 0, -327659, 1, 0, -327658, 1, 0, -327657, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196628, 1, 0, 196629, 1, 0, 196630, 1, 0, 196631, 1, 0, 196632, 1, 0, 196633, 1, 0, 196634, 1, 0, 196635, 1, 0, 196636, 1, 0, 196643, 1, 0, 196644, 1, 0, 196645, 1, 0, 196646, 1, 0, 196647, 1, 0, 655355, 1, 0, 655356, 1, 0, 655357, 1, 0, 655358, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589843, 1, 0, 589844, 1, 0, 589845, 1, 0, 589846, 1, 0, 589847, 1, 0, 589848, 1, 0, 589849, 1, 0, 589850, 1, 0, 589851, 1, 0, 589852, 1, 0 )
+
+[node name="backgroudn" type="Node2D" parent="."]
+position = Vector2( 1312.06, -209.335 )
+scale = Vector2( 2.41833, 2.05383 )
+
+[node name="item" parent="backgroudn" instance=ExtResource( 3 )]
+position = Vector2( -577.158, 344.371 )
+scale = Vector2( 0.413509, 0.486895 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -158.278, 411.853 )
+z_index = 1
+collision_mask = 44
+
+[node name="student" type="Node2D" parent="."]
+position = Vector2( 868.044, 261.457 )
+
+[node name="enemy" parent="student" instance=ExtResource( 2 )]
+position = Vector2( -657.131, 194.871 )
+
+[node name="enemy2" parent="student" instance=ExtResource( 2 )]
+position = Vector2( -4.29596, -303.505 )
+
+[node name="enemy3" parent="student" instance=ExtResource( 2 )]
+position = Vector2( 1358.72, -242.617 )
+
+[node name="enemy4" parent="student" instance=ExtResource( 2 )]
+position = Vector2( -317.051, 220.681 )
+
+[node name="enemy5" parent="student" instance=ExtResource( 2 )]
+position = Vector2( 846.963, 88.3274 )
+
+[node name="enemy6" parent="student" instance=ExtResource( 2 )]
+position = Vector2( 419.915, -687.17 )
+
+[node name="escadas" type="Node2D" parent="."]
+position = Vector2( 0, 1.52588e-05 )
+
+[node name="3" type="Sprite" parent="escadas"]
+position = Vector2( 1817.53, -187.542 )
+scale = Vector2( 2.31148, 2.64606 )
+z_index = 2
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="4" type="Sprite" parent="escadas"]
+position = Vector2( 1935.57, 290.877 )
+scale = Vector2( 2.19548, 1.98782 )
+z_index = 2
+texture = ExtResource( 8 )
+
+[node name="image" type="Sprite" parent="escadas"]
+position = Vector2( 1111.53, -53.3428 )
+scale = Vector2( 2.76172, 2.89267 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="objetos cenario" type="Node" parent="."]
+
+[node name="player" type="StaticBody2D" parent="objetos cenario"]
+position = Vector2( 0, 1.52588e-05 )
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 418.729, -454.369 )
+rotation = 1.5708
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="objetos cenario/player"]
+position = Vector2( 1910.76, 402.813 )
+polygon = PoolVector2Array( -153.818, 192, 337.166, 188.728, 329.39, -210.847, 266.853, -204.741, 2.45874, 53.2354 )
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="objetos cenario/player"]
+position = Vector2( 1855.04, -139.017 )
+polygon = PoolVector2Array( 122.699, 331.597, -355.294, 337.203, -318.972, -180.939, -313.339, -180.814 )
+one_way_collision = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 1987.42, 215.677 )
+shape = SubResource( 4 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="objetos cenario/player"]
+position = Vector2( 2612.64, -234.081 )
+shape = SubResource( 5 )
+
+[node name="student" type="StaticBody2D" parent="objetos cenario"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/student"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 2138.11, 226.15 )
+shape = SubResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="objetos cenario"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/Area2D"]
+position = Vector2( 1896.58, -2.13263 )
+shape = SubResource( 7 )
+
+[node name="Area2D2" type="Area2D" parent="objetos cenario"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objetos cenario/Area2D2"]
+position = Vector2( 2018.97, 132.389 )
+shape = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -25.0
+autoplay = true
+
+[node name="mobile controle" parent="." instance=ExtResource( 9 )]
+
+[connection signal="item" from="backgroudn/item" to="Player" method="_on_item_item"]
+[connection signal="pegar" from="Player" to="backgroudn/item" method="_on_Player_pegar"]
+[connection signal="subir" from="Player" to="objetos cenario/player/CollisionShape2D2" method="_on_Player_subir"]
+[connection signal="subirf" from="Player" to="objetos cenario/player/CollisionShape2D2" method="_on_Player_subirf"]
+[connection signal="body_entered" from="objetos cenario/Area2D" to="objetos cenario/player/CollisionShape2D2" method="entrou"]
+[connection signal="body_exited" from="objetos cenario/Area2D" to="objetos cenario/player/CollisionShape2D2" method="saiu"]
+[connection signal="body_entered" from="objetos cenario/Area2D2" to="objetos cenario/player/CollisionShape2D2" method="entrou1"]

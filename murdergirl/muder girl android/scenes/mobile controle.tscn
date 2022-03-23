@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/botoes/2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/botoes/1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/botoes/5.png" type="Texture" id=3]
+[ext_resource path="res://sprites/botoes/4.png" type="Texture" id=4]
+[ext_resource path="res://sprites/botoes/6.png" type="Texture" id=5]
+
+[node name="mobile controle" type="CanvasLayer"]
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2( 200.101, 488.927 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 2 )
+action = "right"
+
+[node name="right2" type="TouchScreenButton" parent="."]
+position = Vector2( 903.596, 299.209 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 5 )
+action = "run"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2( 18.8778, 485.152 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 1 )
+action = "left"
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2( 829.865, 299.131 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 1 )
+action = "up"
+
+[node name="body" type="TouchScreenButton" parent="."]
+position = Vector2( 660.43, 444.804 )
+scale = Vector2( 0.674838, 0.735911 )
+normal = ExtResource( 3 )
+action = "action"
+
+[node name="pegar" type="TouchScreenButton" parent="."]
+position = Vector2( 855.467, 441.849 )
+scale = Vector2( 0.674838, 0.735911 )
+normal = ExtResource( 4 )
+action = "pegar"

@@ -1,0 +1,130 @@
+ffmpeg version 2021-09-22-git-447cf53774-essentials_build-www.gyan.dev Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 10.3.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-libass --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      57.  6.100 / 57.  6.100
+  libavcodec     59.  9.100 / 59.  9.100
+  libavformat    59.  5.100 / 59.  5.100
+  libavdevice    59.  0.101 / 59.  0.101
+  libavfilter     8.  9.100 /  8.  9.100
+  libswscale      6.  1.100 /  6.  1.100
+  libswresample   4.  0.100 /  4.  0.100
+  libpostproc    56.  0.100 / 56.  0.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/lucas/AppData/Local/Temp/KritaFFmpegProgress.dXFgjW'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '9'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame%04d.png'.
+Reading option '-crf' ... matched as AVOption 'crf' with argument '23'.
+Reading option '-preset' ... matched as AVOption 'preset' with argument 'medium'.
+Reading option '-profile:v' ... matched as option 'profile' (set profile) with argument 'baseline'.
+Reading option '-pix_fmt' ... matched as option 'pix_fmt' (set pixel format) with argument 'yuv420p'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/walk.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/lucas/AppData/Local/Temp/KritaFFmpegProgress.dXFgjW.
+[file @ 000002d5dea4dc00] Setting default whitelist 'file,crypto,data'
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 9.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame%04d.png.
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0000.png' for reading
+[file @ 000002d5dea91280] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea993c0] Statistics: 83492 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0001.png' for reading
+[file @ 000002d5dea97800] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea97900] Statistics: 76024 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0002.png' for reading
+[file @ 000002d5dea978c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea97b40] Statistics: 84029 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0003.png' for reading
+[file @ 000002d5dea978c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea97d00] Statistics: 84566 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0004.png' for reading
+[file @ 000002d5dea978c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea97ec0] Statistics: 78084 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0005.png' for reading
+[file @ 000002d5dea978c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea98080] Statistics: 80848 bytes read, 0 seeks
+[image2 @ 000002d5dea8e080] Opening 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame0006.png' for reading
+[file @ 000002d5dea98080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002d5dea978c0] Statistics: 80848 bytes read, 0 seeks
+Input #0, image2, from 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame%04d.png':
+  Duration: 00:00:00.28, start: 0.000000, bitrate: N/A
+  Stream #0:0, 7, 1/25: Video: png, 1 reference frame, rgba(pc), 1920x1080 [SAR 11811:11811 DAR 16:9], 0/1, 25 fps, 25 tbr, 25 tbn
+Successfully opened the file.
+Parsing a group of options: output url C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/walk.mp4.
+Applying option profile:v (set profile) with argument baseline.
+Applying option pix_fmt (set pixel format) with argument yuv420p.
+Successfully parsed a group of options.
+Opening an output file: C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/walk.mp4.
+[file @ 000002d5e0e6cd00] Setting default whitelist 'file,crypto,data'
+Successfully opened the file.
+detected 4 logical cores
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 4 times
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] Setting 'video_size' to value '1920x1080'
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] Setting 'time_base' to value '1/9'
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] Setting 'pixel_aspect' to value '11811/11811'
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] Setting 'frame_rate' to value '9/1'
+[graph 0 input from stream 0:0 @ 000002d5e0ee1840] w:1920 h:1080 pixfmt:rgba tb:1/9 fr:9/1 sar:11811/11811
+[format @ 000002d5deafff40] Setting 'pix_fmts' to value 'yuv420p'
+[auto_scale_0 @ 000002d5deacc780] w:iw h:ih flags:'' interl:0
+[format @ 000002d5deafff40] auto-inserting filter 'auto_scale_0' between the filter 'Parsed_null_0' and the filter 'format'
+[AVFilterGraph @ 000002d5dea97b00] query_formats: 4 queried, 3 merged, 1 already done, 0 delayed
+[auto_scale_0 @ 000002d5deacc780] w:1920 h:1080 fmt:rgba sar:11811/11811 -> w:1920 h:1080 fmt:yuv420p sar:1/1 flags:0x0
+[libx264 @ 000002d5e0e6af00] using mv_range_thread = 88
+[libx264 @ 000002d5e0e6af00] using SAR=1/1
+[libx264 @ 000002d5e0e6af00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002d5e0e6af00] profile Constrained Baseline, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000002d5e0e6af00] 264 - core 164 r3065 ae03d92 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=3 deblock=1:0:0 analyse=0x1:0x111 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=9 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/walk.mp4':
+  Metadata:
+    encoder         : Lavf59.5.100
+  Stream #0:0, 0, 1/18432: Video: h264, 1 reference frame (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 (0x0) [SAR 1:1 DAR 16:9], 0/1, q=2-31, 9 fps, 18432 tbn
+    Metadata:
+      encoder         : Lavc59.9.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+Clipping frame in rate conversion by 0.000008
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 7 times
+[out_0_0 @ 000002d5e0eeae80] EOF on sink link out_0_0:default.
+No more output streams to write to, finishing.
+[libx264 @ 000002d5e0e6af00] frame=   0 QP=7.98 NAL=3 Slice:I Poc:0   I:8160 P:0    SKIP:0    size=15169 bytes
+[libx264 @ 000002d5e0e6af00] frame=   1 QP=21.02 NAL=2 Slice:P Poc:2   I:177  P:54   SKIP:7929 size=7483 bytes
+[libx264 @ 000002d5e0e6af00] frame=   2 QP=19.55 NAL=2 Slice:P Poc:4   I:97   P:54   SKIP:8009 size=4345 bytes
+[libx264 @ 000002d5e0e6af00] frame=   3 QP=16.18 NAL=2 Slice:P Poc:6   I:115  P:52   SKIP:7993 size=4491 bytes
+[libx264 @ 000002d5e0e6af00] frame=   4 QP=11.64 NAL=2 Slice:P Poc:8   I:104  P:49   SKIP:8007 size=2824 bytes
+[libx264 @ 000002d5e0e6af00] frame=   5 QP=13.02 NAL=2 Slice:P Poc:10  I:132  P:33   SKIP:7995 size=4973 bytes
+[libx264 @ 000002d5e0e6af00] frame=   6 QP=10.31 NAL=2 Slice:P Poc:12  I:6    P:5    SKIP:8149 size=52 bytes
+frame=    7 fps=0.0 q=-1.0 Lsize=      40kB time=00:00:00.66 bitrate= 490.1kbits/s speed=3.93x    
+[AVIOContext @ 000002d5dea8ddc0] Statistics: 0 seeks, 2 writeouts
+video:39kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.214493%
+Input file #0 (C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/frame%04d.png):
+  Input stream #0:0 (video): 7 packets read (567891 bytes); 7 frames decoded; 
+  Total: 7 packets (567891 bytes) demuxed
+Output file #0 (C:/Users/lucas/Documents/godot/muder girl/sprites/chr1/walk.mp4):
+  Output stream #0:0 (video): 7 frames encoded; 7 packets muxed (39964 bytes); 
+  Total: 7 packets (39964 bytes) muxed
+7 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 000002d5e0eace40] Statistics: 2 seeks, 4 writeouts
+[libx264 @ 000002d5e0e6af00] frame I:1     Avg QP: 7.98  size: 15169
+[libx264 @ 000002d5e0e6af00] frame P:6     Avg QP:15.29  size:  4028
+[libx264 @ 000002d5e0e6af00] mb I  I16..4: 97.6%  0.0%  2.4%
+[libx264 @ 000002d5e0e6af00] mb P  I16..4:  0.3%  0.0%  1.0%  P16..4:  0.4%  0.1%  0.0%  0.0%  0.0%    skip:98.2%
+[libx264 @ 000002d5e0e6af00] coded y,uvDC,uvAC intra: 5.1% 0.0% 0.0% inter: 0.1% 0.0% 0.0%
+[libx264 @ 000002d5e0e6af00] i16 v,h,dc,p: 98%  0%  2%  0%
+[libx264 @ 000002d5e0e6af00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 44% 10% 22%  3%  3%  8%  2%  6%  2%
+[libx264 @ 000002d5e0e6af00] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 000002d5e0e6af00] ref P L0: 60.5% 26.0% 13.5%
+[libx264 @ 000002d5e0e6af00] kb/s:404.61
