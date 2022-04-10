@@ -34,17 +34,23 @@ func test(body):
 		ene = 6
 func executa():
 	if coli == 1 and ene == 1 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy").queue_free()
+		get_node("../../student/enemy").visible = false
+		get_node("../../student/enemy").position.y = -100
 	elif coli == 1 and ene == 2 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy2").queue_free()
+		get_node("../../student/enemy2").visible = false
+		get_node("../../student/enemy2").position.y = -100
 	elif coli == 1 and ene == 3 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy3").queue_free()
+		get_node("../../student/enemy3").visible = false
+		get_node("../../student/enemy3").position.y = -100
 	elif coli == 1 and ene == 4 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy4").queue_free()
+		get_node("../../student/enemy4").visible = false
+		get_node("../../student/enemy4").position.y = -100
 	elif coli == 1 and ene == 5 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy5").queue_free()
+		get_node("../../student/enemy5").visible = false
+		get_node("../../student/enemy5").position.y = -100
 	elif coli == 1 and ene == 6 and  Input.is_action_pressed("action"):
-		get_node("../../student/enemy6").queue_free()
+		get_node("../../student/enemy6").visible = false
+		get_node("../../student/enemy6").position.y = -100
 
 func _on_Area2D_body_exited(body):
 	coli = 0

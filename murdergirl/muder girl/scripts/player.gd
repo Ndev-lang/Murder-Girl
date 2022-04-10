@@ -28,7 +28,7 @@ func _playsom():
 func _stopsom():
 	$walk.stop()
 #move
-func _physics_process(delta):
+func _input(event):
 	if Input.is_action_pressed("up"):
 		emit_signal("subir")
 	else:
@@ -55,6 +55,8 @@ func _physics_process(delta):
 	else:
 		matar = 0
 		facaoff()
+
+func _physics_process(delta):
 	if Input.is_action_pressed("run"):
 		SPEED = 300
 	else:

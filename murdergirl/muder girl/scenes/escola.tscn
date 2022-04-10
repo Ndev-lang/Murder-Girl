@@ -6,9 +6,9 @@
 [ext_resource path="res://scenes/item.tscn" type="PackedScene" id=4]
 [ext_resource path="res://music/y2meta.ogg" type="AudioStream" id=5]
 [ext_resource path="res://scripts/CollisionShape2D2.gd" type="Script" id=6]
+[ext_resource path="res://sprites/backgorund/white-texture.jpg" type="Texture" id=7]
 [ext_resource path="res://sprites/backgorund/2.png" type="Texture" id=8]
 [ext_resource path="res://sprites/itens/kitchen-knife-1135268_1280.png" type="Texture" id=9]
-[ext_resource path="res://sprites/backgorund/white-texture.jpg" type="Texture" id=10]
 [ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sprites/backgorund/porta.png" type="Texture" id=12]
 [ext_resource path="res://sprites/backgorund/rabbit-3075088_640.png" type="Texture" id=13]
@@ -66,7 +66,7 @@ scale = Vector2( 2.41833, 2.05383 )
 
 [node name="white-texture" type="Sprite" parent="backgroudn"]
 position = Vector2( -188.612, 309.84 )
-texture = ExtResource( 10 )
+texture = ExtResource( 7 )
 
 [node name="1" type="Sprite" parent="backgroudn"]
 z_index = -2
@@ -181,7 +181,7 @@ format = 1
 tile_data = PoolIntArray( -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -327671, 0, 0, -327670, 0, 0, -327669, 0, 0, -327668, 0, 0, -327667, 0, 0, -327666, 0, 0, -327665, 0, 0, -327664, 0, 0, -327663, 0, 0, -327662, 0, 0, -327661, 0, 0, -327660, 0, 0, -327659, 0, 0, -327658, 0, 0, -327657, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 196635, 0, 0, 196636, 0, 0, 196643, 0, 0, 196644, 0, 0, 196645, 0, 0, 196646, 0, 0, 196647, 0, 0, 655341, 0, 0, 655342, 0, 0, 655343, 0, 0, 655344, 0, 0, 655345, 0, 0, 655346, 0, 0, 655347, 0, 0, 655348, 0, 0, 655349, 0, 0, 655350, 0, 0, 655351, 0, 0, 655352, 0, 0, 655353, 0, 0, 655354, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589856, 0, 0, 589857, 0, 0, 589859, 0, 0, 589860, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -199.55, 472.174 )
+position = Vector2( -200.676, 473.3 )
 z_index = 2
 collision_mask = 44
 

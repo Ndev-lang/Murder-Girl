@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/menu.tres" type="StyleBox" id=5]
 [ext_resource path="res://scenes/shader.gdshader" type="Shader" id=6]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
 
 [node name="Control" type="Control"]
@@ -28,7 +28,7 @@ scale = Vector2( 0.205328, 0.217194 )
 texture = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 2 )
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -75.5
